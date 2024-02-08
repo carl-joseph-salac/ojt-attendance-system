@@ -27,7 +27,7 @@ class AttendanceController extends Controller
 
         $newAttendance = Attendance::create($data);
 
-        return redirect(route('attendance.index'))->with('success', '! Attendance Created Successfully');
+        return redirect(route('home'))->with('created', '');
     }
 
     public function edit(Attendance $attendance){
@@ -45,13 +45,13 @@ class AttendanceController extends Controller
 
         $attendance->update($data);
 
-        return redirect(route('attendance.index'))->with('success', '! Attendance Updated Successfully');
+        return redirect(route('home'))->with('updated', '');
     }
 
     public function destroy(Attendance $attendance){
         $attendance->delete();
 
-        return redirect(route('attendance.index'))->with('success', '! Attendance Deleted Successfully');
+        return redirect(route('home'))->with('deleted', '');
     }
 
 }

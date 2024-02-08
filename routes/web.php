@@ -25,3 +25,7 @@ Route::get('/{attendance}/edit', [AttendanceController::class, 'edit'])->name('a
 Route::put('/{attendance}/update', [AttendanceController::class, 'update'])->name('attendance.update');
 
 Route::delete('/{attendance}/destroy', [AttendanceController::class, 'destroy'])->name('attendance.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
