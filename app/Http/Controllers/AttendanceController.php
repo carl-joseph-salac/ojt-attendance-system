@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Attendance;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class AttendanceController extends Controller
 {
@@ -18,7 +19,7 @@ class AttendanceController extends Controller
 
     public function store(Request $request){
         $data = $request->validate([
-            'name' => 'required',
+            'name' => 'required|String',
             'time_in' => 'required',
             'break_out' => 'required',
             'break_in' => 'required',
@@ -36,7 +37,7 @@ class AttendanceController extends Controller
 
     public function update(Attendance $attendance, Request $request){
         $data = $request->validate([
-            'name' => 'required',
+            'name' => 'required|String',
             'time_in' => 'required',
             'break_out' => 'required',
             'break_in' => 'required',

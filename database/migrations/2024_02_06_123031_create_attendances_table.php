@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('attendances', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('time_in');
-            $table->string('break_out');
-            $table->string('break_in');
-            $table->string('time_out');
+            $table->time('time_in');
+            $table->time('break_out');
+            $table->time('break_in');
+            $table->time('time_out');
             $table->timestamps();
         });
     }
