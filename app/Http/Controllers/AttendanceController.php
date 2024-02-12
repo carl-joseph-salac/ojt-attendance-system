@@ -32,7 +32,7 @@ class AttendanceController extends Controller
     }
 
     public function edit(Attendance $attendance){
-        return view('edit', ['attendance'=>$attendance]);
+        return view('edit',compact('attendance'));
     }
 
     public function update(Attendance $attendance, Request $request){

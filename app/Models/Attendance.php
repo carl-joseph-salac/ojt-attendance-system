@@ -12,7 +12,6 @@ class Attendance extends Model
     protected $fillable = [
         'name',
         'time_in',
-        'break_out',
         'break_in',
         'time_out'
     ];

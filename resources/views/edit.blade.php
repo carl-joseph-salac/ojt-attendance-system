@@ -21,7 +21,7 @@
                         </div>
                         <form action="{{ route('attendance.update', ['attendance' => $attendance]) }}" method="post">
                             @csrf
-                            @method('post')
+                            @method('put')
                             <div class="mb-3">
                                 <label for="name" class="form-label">Student Name</label>
                                 <input name="name" type="text" class="form-control" id="name"
@@ -29,19 +29,19 @@
                             </div>
                             <div class="mb-3">
                                 <label for="time_in" class="form-label">Time in</label>
-                                <input name="time_in" type="text" class="form-control" id="time_in" placeholder="HH:MM AM/PM" value="{{ $attendance->name }}">
+                                <input name="time_in" type="text" class="form-control" id="time_in" placeholder="HH:MM AM/PM" value="{{ $attendance->time_in }}">
                             </div>
                             <div class="mb-3">
                                 <label for="break_out" class="form-label">Break out</label>
-                                <input name="break_out" type="text" class="form-control" id="break_out" placeholder="HH:MM AM/PM" value="{{ $attendance->name }}">
+                                <input name="break_out" type="text" class="form-control" id="break_out" placeholder="HH:MM AM/PM" value="{{ $attendance->break_out }}">
                             </div>
                             <div class="mb-3">
                                 <label for="break_in" class="form-label">Break in</label>
-                                <input name="break_in" type="text" class="form-control" id="break_in" placeholder="HH:MM AM/PM" value="{{ $attendance->name }}">
+                                <input name="break_in" type="text" class="form-control" id="break_in" placeholder="HH:MM AM/PM" value="{{ $attendance->break_in }}">
                             </div>
                             <div class="mb-3">
                                 <label for="time_out" class="form-label">Time out</label>
-                                <input name="time_out" type="text" class="form-control" id="time_out" placeholder="HH:MM AM/PM" value="{{ $attendance->name }}">
+                                <input name="time_out" type="text" class="form-control" id="time_out" placeholder="HH:MM AM/PM" value="{{ $attendance->time_out }}">
                             </div>
                             <div class="text-center">
                                 <input type="submit" class="btn btn-primary" value="Submit Attendance">
